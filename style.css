@@ -1,0 +1,214 @@
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+/*.axis text {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+    font-family: sans-serif;
+    font-size: 10px;
+}*/
+
+#chart{
+    width: 75%;
+    float: left;
+}
+#matrix{
+    width: 25%;
+    float: left;
+}
+
+
+/*.cat1-line{
+    stroke: red;
+    stroke-width: 1px;
+    fill: none;
+}
+.cat2-line{
+    stroke: orange;
+    stroke-width: 1px;
+    fill: none;
+}
+.cat3-line{
+    stroke: #202000;
+    stroke-width: 1px;
+    fill: none;*/
+/*}
+.cat1 {
+    stroke: #00FF00 ;
+    stroke-width: 1px;
+    fill: none;
+}
+.cat2 {
+    stroke: #0000FF ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat3 {
+    stroke: #FFFF00 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat4 {
+    stroke: #FF00FF ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat5 {
+    stroke: #00FFFF ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat6 {
+    stroke: #000000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat7 {
+    stroke: #800000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat8 {
+    stroke: #008000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat9 {
+    stroke: #000080 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat10 {
+    stroke: #808000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat11 {
+    stroke: #800080 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat12 {
+    stroke: #008080 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat13 {
+    stroke: #808080 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat14 {
+    stroke: #C00000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat15 {
+    stroke: #00C000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat16 {
+    stroke: #0000C0 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat17 {
+    stroke: #C0C000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat18 {
+    stroke: #C000C0 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat19 {
+    stroke: #00C0C0 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat20 {
+    stroke: #C0C0C0 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat21 {
+    stroke: #400000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat22 {
+    stroke: #004000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat23 {
+    stroke: #000040 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat24 {
+    stroke: #404000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat25 {
+    stroke: #400040 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat26 {
+    stroke: #004040 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat27 {
+    stroke: #404040 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat28 {
+    stroke: #200000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat29 {
+    stroke: #002000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat30 {
+    stroke: #000020 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat31 {
+    stroke: #202000 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat32 {
+    stroke: #200020 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat33 {
+    stroke: #002020 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat34 {
+    stroke: #202020 ;
+    stroke-width: 1px;
+    fill:none;
+}
+.cat35 {
+    stroke: #600000 ;
+    stroke-width: 1px;
+    fill:none;
+}*/
