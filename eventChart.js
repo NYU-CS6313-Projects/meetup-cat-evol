@@ -1,17 +1,26 @@
+d3.select('#eventChartTitle').html("Events");
 
-var chartWidth = 900;
+var chartWidth = 1125;
 var chartHeight = 450;
 var padding = 55;
 
 var eventDetail=d3.select('body').append('div')
 	.style('position', 'absolute')
 	.style('padding', '0 10px')
-	.style('background', 'yellow')
+	.style('background', 'black')
+	.style('color', 'white')
 	.style('opacity', 0);
 var dotData = [];
 var startTime = new Date("2300-01-01");
 var endTime = new Date("1800-01-01");
 var maxCount = 0;
+
+var eventTip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d){
+            return "<strong>Category: </strong>"+d.category.name+"</br>"+"<strong>Event Name: </strong>"+d.event.name+"</br>"+"<Strong>Headcount: </strong>"+d.event.headcount;
+        });
 
 function updateEventChart(categoryId, categoryName) {
 
@@ -21,9 +30,6 @@ function updateEventChart(categoryId, categoryName) {
 	maxCount = 0;
 
 	updateData();
-	//console.log("After call updateData: "+dotData);
-
-
 
 };
 
@@ -43,7 +49,7 @@ function updateData(){
 			currentCount++;
 			var id = i+1;
 			var selectedFilename = "./data/events_headcount/category"+id+"_events.json";
-			console.log("Selected file: "+selectedFilename);
+			//console.log("Selected file: "+selectedFilename);
 
 			d3.json(selectedFilename, function (error, cdata) {
 				if(error) return console.warn(error);
@@ -83,8 +89,13 @@ function update(selectedCount, currentCount){
 	//var chartTitle = d3.select('#eventChart').append("p").text(categoryName);
 	var chartView = d3.select('#eventChart')
 		.append('svg')
+		.style('padding', '10 0px')
+		.style('padding-left', '-50px')
+		.style('padding-right', '10px')
 		.attr('width', chartWidth)
 		.attr('height', chartHeight);
+
+        chartView.call(eventTip);
 
 	var xScale = d3.time.scale().domain([startTime, endTime]).range([0, chartWidth-padding]);
 	var yScale = d3.scale.linear().domain([maxCount,0]).range([55, chartHeight]);
@@ -95,7 +106,7 @@ function update(selectedCount, currentCount){
 
 	var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(20);
 
-	chartView.append("g").attr("class", "axis").attr("transform", "translate("+(padding)+","+-padding+")").call(yAxis);
+	chartView.append("g").attr("class", "axis").attr("transform", "translate("+(padding)+","+(-padding)+")").call(yAxis);
 
 	for(var x = 0; x<dotData.length; x++){
 		//console.log("current dot data length: "+x);
@@ -120,18 +131,18 @@ function update(selectedCount, currentCount){
 
 		circles.on('mouseover', function(d){
 			eventDetail.transition().style('opacity',.9);
-
-			eventDetail.html(d.category.name+"</br>"+d.event.name+"</br>"+ d.event.headcount).style('left', (d3.event.pageX)+'px')
-				.style('top', (d3.event.pageY)+'px');
+                        eventTip.show(d);
+			//eventDetail.html("<strong>Category: </strong>"+d.category.name+"</br>"+"<strong>Event Name: </strong>"+d.event.name+"</br>"+"<Strong>Headcount: </strong>"+d.event.headcount).style('left', (d3.event.pageX)+'px')
+			//	.style('top', (d3.event.pageY)+'px');
 			d3.select(this)
 				.style('stroke', 'red')
 				.style('stroke-width', 1);
 		});
 
 		circles.on('mouseout', function(d){
-			eventDetail.transition()
-				.style('opacity', 0);
-
+			//eventDetail.transition()
+			//	.style('opacity', 0);
+                        eventTip.hide(d);
 			d3.select(this)
 				.style('stroke-width', 0);
 		});
