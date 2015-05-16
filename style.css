@@ -1,0 +1,29 @@
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+/*.axis text {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+    font-family: sans-serif;
+    font-size: 10px;
+}*/
+
+#chart{
+    width: 75%;
+    float: left;
+}
+#matrix{
+    width: 25%;
+    float: left;
+}
+
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}

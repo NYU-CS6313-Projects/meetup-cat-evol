@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--<link rel="shortcut icon" type="image/x-icon" href="icon.png">-->
-  <title>NYU - CS6313 - Project X</title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>Meetup Category Evolution</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
 </head>
 <body>
+  <div class="container">
+    <h1 id="title"></h1>
+    <div id="menu"></div>
+    <div id="view-btn"></div>
+    <div id="line-chart"></div>
+    <Strong id="eventChartTitle"></Strong>
+    <div id = "eventChart"></div>
+  </div>
+  <script src = "eventChart.js"></script>
+  <script src="menu.js"></script>
+  <script src="line.js"></script>
+
 </body>
 </html>
