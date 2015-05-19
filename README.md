@@ -6,4 +6,4 @@ A live demo can be found [here](http://nyu-cs6313-projects.github.io/meetup-cat-
 
 Demo Video [here](https://www.dropbox.com/s/h266kw5cvayl6jl/Demo%20Video.mov?dl=0).
 
-Documentation [here](#). (submitted on NYU Classes, will update here later after due)
+Documentation [here](https://drive.google.com/file/d/0B971PR022VmxYzBxRDcwVnpEQWs/view?usp=sharing).
